@@ -45,6 +45,9 @@ namespace EzTrain.Views
                     case (int)MenuItemType.BookInfo:
                         MenuPages.Add(id, new NavigationPage(new BooksPage()));
                         break;
+                    case (int)MenuItemType.Workout:
+                        MenuPages.Add(id, new NavigationPage(new WorkoutSetupPage()));
+                        break;
                     default:
                         throw new NotImplementedException();
                 }

@@ -25,6 +25,7 @@ namespace EzTrain.Views
                 new HomeMenuItem {Id = MenuItemType.HelloWord, Title = MenuItemType.HelloWord.ToString() },
                 new HomeMenuItem {Id = MenuItemType.Stopwatch, Title = MenuItemType.Stopwatch.ToString() },
                 new HomeMenuItem {Id = MenuItemType.BookInfo, Title = MenuItemType.BookInfo.ToString() },
+                new HomeMenuItem {Id = MenuItemType.Workout, Title = MenuItemType.Workout.ToString() },
             };
 
             ListViewMenu.ItemsSource = menuItems;

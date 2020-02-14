@@ -36,14 +36,6 @@ namespace EzTrain.Views
         {
             try
             {
-                //var x = Book;
-                //var y = MessagingCenter.Instance;
-                //var z = e;
-
-                //MessagingCenter.Send(this, "AddBook", Book);
-
-                //await Task.Delay(1000);
-
                 await bookInfoRepository.AddItemAsync(Book);
 
                 await Navigation.PopModalAsync();

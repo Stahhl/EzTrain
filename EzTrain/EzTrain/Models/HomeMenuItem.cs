@@ -10,7 +10,8 @@ namespace EzTrain.Models
         About,
         HelloWord,
         Stopwatch,
-        BookInfo
+        BookInfo,
+        Workout,
     }
     public class HomeMenuItem
     {

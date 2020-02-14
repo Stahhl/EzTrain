@@ -12,7 +12,8 @@ namespace EzTrain.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+        public IDataStore<Item> ItemDataStore => DependencyService.Get<IDataStore<Item>>();
+        public IDataStore<BookViewModel> BookDataStore => DependencyService.Get<IDataStore<BookViewModel>>();
 
         bool isBusy = false;
         public bool IsBusy

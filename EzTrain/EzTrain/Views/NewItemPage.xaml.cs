@@ -30,6 +30,8 @@ namespace EzTrain.Views
 
         async void Save_Clicked(object sender, EventArgs e)
         {
+            var x = Item;
+
             MessagingCenter.Send(this, "AddItem", Item);
             await Navigation.PopModalAsync();
         }

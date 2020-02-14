@@ -25,7 +25,7 @@ namespace EzTrain.ViewModels
             {
                 var newItem = item as Item;
                 Items.Add(newItem);
-                await DataStore.AddItemAsync(newItem);
+                await ItemDataStore.AddItemAsync(newItem);
             });
         }
 
@@ -39,7 +39,7 @@ namespace EzTrain.ViewModels
             try
             {
                 Items.Clear();
-                var items = await DataStore.GetItemsAsync(true);
+                var items = await ItemDataStore.GetItemsAsync(true);
                 foreach (var item in items)
                 {
                     Items.Add(item);

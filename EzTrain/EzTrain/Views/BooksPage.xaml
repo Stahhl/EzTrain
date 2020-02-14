@@ -25,7 +25,7 @@
                            SelectionMode="Single"
                            SelectionGesture="DoubleTap"
                            SelectionBackgroundColor="#E4E4E4"
-                           ItemsSource="{Binding BookInfo}"
+                           ItemsSource="{Binding Books}"
                            ItemSize="100"
                            DragStartMode="OnHold"
                            IsStickyFooter="True"
@@ -36,7 +36,7 @@
         </syncfusion:SfListView.DragDropController>
         <syncfusion:SfListView.ItemTemplate>
             <DataTemplate>
-                <Grid Padding="10">
+                <Grid Padding="10" BackgroundColor="{Binding MyColor}">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="0.4*" />
                         <RowDefinition Height="0.6*" />
@@ -50,8 +50,8 @@
             <DataTemplate>
                 <Grid>
                     <StackLayout Orientation="Horizontal" BackgroundColor="Black">
-                        <Button Text="ADD" BackgroundColor="Yellow" HorizontalOptions="FillAndExpand" />
-                        <Button Text="START" BackgroundColor="LightGreen" HorizontalOptions="FillAndExpand" />
+                        <Button x:Name="btnAdd" Clicked="AddItem_Clicked" Text="ADD" BackgroundColor="Yellow" HorizontalOptions="FillAndExpand" />
+                        <Button x:Name="btnStart" Clicked="Start_Clicked" Text="START" BackgroundColor="LightGreen" HorizontalOptions="FillAndExpand" />
                     </StackLayout>
                 </Grid>
             </DataTemplate>

@@ -2,6 +2,7 @@
 using EzTrain.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,9 +23,9 @@ namespace EzTrain.Views
 
             interval = new Interval
             {
-                Type = IntervalType.DURATION,
-                Intensity = IntervalIntensity.HIGH,
-                Amount = "30",
+                //Type = IntervalType.NULL,
+                //Intensity = IntervalIntensity.NULL,
+                //Amount = 0,
             };
 
             BindingContext = this;
@@ -44,5 +45,7 @@ namespace EzTrain.Views
         {
             await Navigation.PopModalAsync();
         }
+
     }
+    
 }

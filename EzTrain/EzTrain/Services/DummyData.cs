@@ -13,9 +13,9 @@ namespace EzTrain.Services
         {
             return new ObservableCollection<Interval>()
             {
-                new Interval() { Intensity = IntervalIntensity.LIGHT, Type = IntervalType.DURATION, Amount = "30", HighlightColor = Color.CadetBlue },
-                new Interval() { Intensity = IntervalIntensity.HIGH, Type = IntervalType.DURATION, Amount = "60", HighlightColor = Color.CadetBlue },
-                new Interval() { Intensity = IntervalIntensity.LIGHT, Type = IntervalType.DURATION, Amount = "30", HighlightColor = Color.CadetBlue },
+                new Interval() { Intensity = IntervalIntensity.LIGHT, Type = IntervalType.DURATION, Amount = 30, HighlightColor = Color.CadetBlue },
+                new Interval() { Intensity = IntervalIntensity.HIGH, Type = IntervalType.DURATION, Amount = 60, HighlightColor = Color.CadetBlue },
+                new Interval() { Intensity = IntervalIntensity.LIGHT, Type = IntervalType.DURATION, Amount = 30, HighlightColor = Color.CadetBlue },
             };
         }
     }

@@ -4,18 +4,32 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             xmlns:controls="clr-namespace:EzTrain.Converters;assembly=EzTrain"
+	         xmlns:enums="clr-namespace:EzTrain.Models;assembly=EzTrain"
              x:Class="EzTrain.Views.NewIntervalPage">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" />
         <ToolbarItem Text="Save" Clicked="Save_Clicked" />
     </ContentPage.ToolbarItems>
-    
+
+    <!--<ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:IntEnumConverter x:Key="IntEnum"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>-->
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Spacing="20" Padding="15">
+            <controls:EnumBindablePicker x:TypeArguments="enums:IntervalIntensity" SelectedItem="{Binding Interval.Intensity}"></controls:EnumBindablePicker>
+            <Label Text="{Binding Interval.Intensity}"></Label>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
+    
+    
+            <!--<Label Text="Amount" FontSize="Medium" />
+            <Editor Text="{Binding Interval.Amount}" d:Text="Item name" FontSize="Small" />
+            <Picker ItemsSource="{Binding Interval.IntensityNames}" SelectedIndex="{Binding Interval.Intensity}"/>
+            --><!--<Label Text="Description" FontSize="Medium" />
+            <Editor Text="{Binding Book.BookDescription}" d:Text="Item description" FontSize="Small" Margin="0" />-->

@@ -6,6 +6,7 @@
              mc:Ignorable="d"
              xmlns:controls="clr-namespace:EzTrain.Converters;assembly=EzTrain"
 	         xmlns:enums="clr-namespace:EzTrain.Models;assembly=EzTrain"
+             xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms"
              x:Class="EzTrain.Views.NewIntervalPage">
 
     <ContentPage.ToolbarItems>
@@ -21,15 +22,36 @@
 
     <ContentPage.Content>
         <StackLayout Spacing="20" Padding="15">
-            <controls:EnumBindablePicker x:TypeArguments="enums:IntervalIntensity" SelectedItem="{Binding Interval.Intensity}"></controls:EnumBindablePicker>
-            <Label Text="{Binding Interval.Intensity}"></Label>
+            <Label Text="Type:"/>
+            <controls:EnumBindablePicker x:TypeArguments="enums:IntervalType" SelectedItem="{Binding Interval.Type}"/>
+            <Label Text="Intensity"/>
+            <controls:EnumBindablePicker x:TypeArguments="enums:IntervalIntensity" SelectedItem="{Binding Interval.Intensity}"/>
+            <!--<syncfusion:SfTimePicker x:Name="timePicker"/>-->
+            <Grid>
+                <!--<Label Text="Amount"/>-->
+                <syncfusion:SfTimePicker 
+                    ShowHeader="False"
+                    x:Name="timePicker"
+                    PickerMode="Default" 
+                    Time="0:00:00"/>
+                <!--<Button Text="Open Picker" 
+                    x:Name="pickerButton"
+                    Clicked="Button_Clicked"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    HeightRequest="50" 
+                    WidthRequest="100"/>-->
+            </Grid>
+
         </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>
-    
-    
-            <!--<Label Text="Amount" FontSize="Medium" />
+
+
+<!--<Label Text="Amount" FontSize="Medium" />
             <Editor Text="{Binding Interval.Amount}" d:Text="Item name" FontSize="Small" />
             <Picker ItemsSource="{Binding Interval.IntensityNames}" SelectedIndex="{Binding Interval.Intensity}"/>
-            --><!--<Label Text="Description" FontSize="Medium" />
+            -->
+<!--<Label Text="Description" FontSize="Medium" />
             <Editor Text="{Binding Book.BookDescription}" d:Text="Item description" FontSize="Small" Margin="0" />-->

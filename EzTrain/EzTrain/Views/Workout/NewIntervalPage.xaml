@@ -9,49 +9,32 @@
              xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms"
              x:Class="EzTrain.Views.NewIntervalPage">
 
+
+
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" />
         <ToolbarItem Text="Save" Clicked="Save_Clicked" />
     </ContentPage.ToolbarItems>
 
-    <!--<ContentPage.Resources>
-        <ResourceDictionary>
-            <converters:IntEnumConverter x:Key="IntEnum"/>
-        </ResourceDictionary>
-    </ContentPage.Resources>-->
-
     <ContentPage.Content>
-        <StackLayout Spacing="20" Padding="15">
-            <Label Text="Type:"/>
-            <controls:EnumBindablePicker x:TypeArguments="enums:IntervalType" SelectedItem="{Binding Interval.Type}"/>
+        <StackLayout Spacing="20" Padding="15" Orientation="Vertical">
             <Label Text="Intensity"/>
             <controls:EnumBindablePicker x:TypeArguments="enums:IntervalIntensity" SelectedItem="{Binding Interval.Intensity}"/>
-            <!--<syncfusion:SfTimePicker x:Name="timePicker"/>-->
+            <Label Text="Type:"/>
+            <controls:EnumBindablePicker x:TypeArguments="enums:IntervalType" SelectedItem="{Binding Interval.Type}" x:Name="typePicker"/>
             <Grid>
-                <!--<Label Text="Amount"/>-->
-                <syncfusion:SfTimePicker 
+                <syncfusion:SfTimePicker
+                    IsVisible="False"
                     ShowHeader="False"
                     x:Name="timePicker"
                     PickerMode="Default" 
                     Time="0:00:00"/>
-                <!--<Button Text="Open Picker" 
-                    x:Name="pickerButton"
-                    Clicked="Button_Clicked"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center"
-                    HeightRequest="50" 
-                    WidthRequest="100"/>-->
             </Grid>
 
         </StackLayout>
 
     </ContentPage.Content>
+
+
+
 </ContentPage>
-
-
-<!--<Label Text="Amount" FontSize="Medium" />
-            <Editor Text="{Binding Interval.Amount}" d:Text="Item name" FontSize="Small" />
-            <Picker ItemsSource="{Binding Interval.IntensityNames}" SelectedIndex="{Binding Interval.Intensity}"/>
-            -->
-<!--<Label Text="Description" FontSize="Medium" />
-            <Editor Text="{Binding Book.BookDescription}" d:Text="Item description" FontSize="Small" Margin="0" />-->

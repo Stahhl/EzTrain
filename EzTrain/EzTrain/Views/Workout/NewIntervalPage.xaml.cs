@@ -31,13 +31,40 @@ namespace EzTrain.Views
                 //Amount = 0,
             };
             timePicker.TimeSelected += Time_Changed;
+            typePicker.SelectedIndexChanged += typeChanged;
             BindingContext = interval;
+        }
+
+        private void typeChanged(object sender, EventArgs e)
+        {
+            if(typePicker.SelectedItem == IntervalType.NULL)
+            {
+                timePicker.IsVisible = false;
+            }
+            if (typePicker.SelectedItem == IntervalType.DISTANCE)
+            {
+                timePicker.IsVisible = false;
+
+            }
+            if (typePicker.SelectedItem == IntervalType.DURATION)
+            {
+                timePicker.IsVisible = true;
+
+            }
         }
 
         private Interval interval;
         private WorkoutViewModel workout;
 
 
+        async void AddItem_Clicked(object sender, EventArgs e)
+        {
+            //await Navigation.PushModalAsync(new NavigationPage(new NewIntervalPage(viewModel)));
+        }
+        async void Start_Clicked(object sender, EventArgs e)
+        {
+
+        }
         async void Save_Clicked(object sender, EventArgs e)
         {
             if (hasErrors())

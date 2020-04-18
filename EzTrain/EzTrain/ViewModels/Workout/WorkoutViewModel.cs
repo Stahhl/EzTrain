@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace EzTrain.ViewModels
 {
@@ -17,6 +18,28 @@ namespace EzTrain.ViewModels
 
         private Interval selected;
         private ObservableCollection<Interval> intervals;
+
+        //private Color myColor;
+
+        //public Color MyColor
+        //{
+        //    get { return myColor; }
+        //    set { SetProperty(ref myColor, value); }
+        //}
+
+        //public void ToggleSelection()
+        //{
+        //    isSelected = !isSelected;
+
+        //    if (isSelected == true)
+        //    {
+        //        MyColor = Color.Red;
+        //    }
+        //    else
+        //    {
+        //        MyColor = Color.White;
+        //    }
+        //}
 
         public Interval SelectedInterval
         {

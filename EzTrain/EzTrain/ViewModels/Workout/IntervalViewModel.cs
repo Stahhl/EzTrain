@@ -23,18 +23,30 @@ namespace EzTrain.ViewModels
 
         private bool isSelected;
 
-        public void ToggleSelection()
-        {
-            isSelected = !isSelected;
+        //public void ToggleSelection()
+        //{
+        //    isSelected = !isSelected;
 
-            if (isSelected == true)
-            {
-                Interval.HighlightColor = Color.Red;
-            }
-            else
-            {
-                Interval.HighlightColor = Color.Cyan;
-            }
-        }
+        //    if (isSelected == true)
+        //    {
+        //        Interval.HighlightColor = Color.Red;
+        //    }
+        //    else
+        //    {
+        //        Interval.HighlightColor = Color.Cyan;
+        //    }
+        //}        //public void ToggleSelection()
+        //{
+        //    isSelected = !isSelected;
+
+        //    if (isSelected == true)
+        //    {
+        //        Interval.HighlightColor = Color.Red;
+        //    }
+        //    else
+        //    {
+        //        Interval.HighlightColor = Color.Cyan;
+        //    }
+        //}
     }
 }
